@@ -2,27 +2,27 @@
   {
     "id": "zeit-architektur",
     "title": "Architekturverantwortung bei zeit ag",
-    "summary": "Technische Verantwortung fur Web, SaaS und On-Premise-Architektur in einem etablierten Business-Produkt.",
+    "summary": "Technische Verantwortung f\u00fcr Web, SaaS und On-Premise-Architektur in einem etablierten Business-Produkt.",
     "details": [
       "Leitet Architekturentscheidungen und technische Umsetzungsrichtung",
-      "Arbeitet weiterhin hands-on uber Frontend, Backend und Infrastruktur"
+      "Arbeitet weiterhin hands-on \u00fcber Frontend, Backend und Infrastruktur"
     ],
     "tech": [".NET", "Angular", "Docker", "Kubernetes", "Azure"]
   },
   {
     "id": "zeit-migration",
     "title": "Migration vom Fat Client ins Web",
-    "summary": "Uberfuhrung zentraler Funktionen fur Zeiterfassung, Projektmanagement und Einsatzplanung in eine moderne Web-Plattform.",
+    "summary": "\u00dcberf\u00fchrung zentraler Funktionen f\u00fcr Zeiterfassung, Projektmanagement und Einsatzplanung in eine moderne Web-Plattform.",
     "details": [
-      "Reduziert Abhangigkeit von Windows-Clients",
-      "Ermoglicht Wahl zwischen SaaS- und On-Premise-Betrieb"
+      "Reduziert Abh\u00e4ngigkeit von Windows-Clients",
+      "Erm\u00f6glicht Wahl zwischen SaaS- und On-Premise-Betrieb"
     ],
     "tech": ["C#", "ASP.NET", "SQL Server", "Angular"]
   },
   {
     "id": "webstamp",
     "title": "Swiss Post WebStamp",
-    "summary": "Redesign, Refactoring und Wartung eines produktiven Webshops fur die Schweizerische Post.",
+    "summary": "Redesign, Refactoring und Wartung eines produktiven Webshops f\u00fcr die Schweizerische Post.",
     "details": [
       "Arbeit an einem stark genutzten Endkundenprodukt",
       "Pflege und Weiterentwicklung in einem produktiven Legacy-Umfeld"
@@ -33,7 +33,7 @@
   {
     "id": "post-customs",
     "title": "Mobile- und Accessibility-fokussierte Zolldeklaration",
-    "summary": "Umsetzung und Wartung einer in den Postprozess eingebetteten Losung mit starkem Fokus auf mobile Endgerate und Barrierefreiheit.",
+    "summary": "Umsetzung und Wartung einer in den Postprozess eingebetteten L\u00f6sung mit starkem Fokus auf mobile Endger\u00e4te und Barrierefreiheit.",
     "details": [
       "Produkt musste in bestehende Prozesse integriert werden",
       "Accessibility und mobiles Nutzungsszenario waren Kernanforderungen"
@@ -44,7 +44,7 @@
   {
     "id": "nextevent-platform",
     "title": "Modulare Event- und Verkaufsplattform",
-    "summary": "Weiterentwicklung einer hochgradig modularen Reservations- und Verkaufsplattform fur Events aller Art.",
+    "summary": "Weiterentwicklung einer hochgradig modularen Reservations- und Verkaufsplattform f\u00fcr Events aller Art.",
     "details": [
       "Parametrierbare Plattform mit kundenspezifischen Erweiterungen",
       "Betrieb in AWS auf produktiven Cloud-Instanzen"
@@ -55,9 +55,9 @@
   {
     "id": "nextevent-mobile",
     "title": "Mobile Einlass- und POS-App",
-    "summary": "Umsetzung einer mobilen Einlass-Applikation inklusive integrierter Point-of-Sale-Funktionalitat.",
+    "summary": "Umsetzung einer mobilen Einlass-Applikation inklusive integrierter Point-of-Sale-Funktionalit\u00e4t.",
     "details": [
-      "Nutzung nativer Geratefunktionen wie Kamera, GPS und NFC",
+      "Nutzung nativer Ger\u00e4tefunktionen wie Kamera, GPS und NFC",
       "Abdeckung eines realen operativen Event-Szenarios"
     ],
     "tech": ["Java", "Apache Cordova", "Backbone.js", "Android", "iOS"]
