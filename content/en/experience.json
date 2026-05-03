@@ -1,0 +1,70 @@
+[
+  {
+    "id": "zeit-architect",
+    "company": "zeit ag",
+    "role": "Software Architect",
+    "location": "Sursee",
+    "start": "2023-12",
+    "end": null,
+    "summary": "Architecture ownership combined with a strongly hands-on engineering role.",
+    "highlights": [
+      "Defines architecture and technical implementation direction",
+      "Makes refactoring and technical-enabler decisions",
+      "Works across frontend, backend, and infrastructure",
+      "Coordinates with product owners, project managers, and engineers across locations",
+      "Owns technical concerns for both SaaS and on-premise operation",
+      "Uses AI-assisted workflows for code, prototypes, and documentation"
+    ],
+    "tech": [".NET", "Angular", "Docker", "Kubernetes", "Azure", "AI tooling"],
+    "featured": true
+  },
+  {
+    "id": "zeit-engineer",
+    "company": "zeit ag",
+    "role": "Software Engineer",
+    "location": "Sursee",
+    "start": "2021-05",
+    "end": "2023-11",
+    "summary": "Migration of core business software capabilities from Windows fat client to web.",
+    "highlights": [
+      "Web migration for time tracking, project management, and workforce planning",
+      "Supported both SaaS and on-premise customers",
+      "Worked in cloud and container environments with CI/CD and code review processes"
+    ],
+    "tech": ["SQL Server", "C#", "ASP.NET", "Angular", "Docker", "Kubernetes", "Azure DevOps"],
+    "featured": true
+  },
+  {
+    "id": "nexbyte-post",
+    "company": "nexbyte GmbH",
+    "role": "Senior Software Engineer",
+    "location": "Thun",
+    "start": "2014-04",
+    "end": "2021-04",
+    "summary": "Worked on customer-facing Swiss Post products with a focus on maintainability and integration into existing business processes.",
+    "highlights": [
+      "Redesign, refactoring, and maintenance of WebStamp",
+      "Built a mobile- and accessibility-oriented customs declaration solution",
+      "Delivered on production PHP and JavaScript stacks running on Linux and MariaDB"
+    ],
+    "tech": ["CentOS", "MariaDB", "PHP", "Zend Framework", "JavaScript", "Aurelia", "Vue"],
+    "featured": true
+  },
+  {
+    "id": "nextevent",
+    "company": "NextEvent AG",
+    "role": "Senior Software Engineer",
+    "location": "Thun",
+    "start": "2016-01",
+    "end": "2021-04",
+    "summary": "Built and evolved a modular event platform and related mobile applications.",
+    "highlights": [
+      "Reservation and sales platform for concerts, conferences, clubs, and shows",
+      "Customer-specific modules for event-specific requirements",
+      "Mobile admissions and POS app using camera, GPS, and NFC",
+      "Internal app service for additional NextEvent applications"
+    ],
+    "tech": ["PHP", "Node.js", "Express", "Backbone.js", "Zend Framework", "AWS", "Java", "Cordova"],
+    "featured": true
+  }
+]

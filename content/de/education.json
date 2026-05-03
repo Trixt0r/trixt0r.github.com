@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "institution": "Universitat Bern",
+      "degree": "Informatikstudium",
+      "period": "2010 - 2014",
+      "summary": "Der Informatik-Teil inklusive Bachelorarbeit zu Deferred Rendering mit Java und OpenGL wurde abgeschlossen. Die Nebenfacher wurden beim direkten Einstieg in die Industrie nicht weiterverfolgt."
+    },
+    {
+      "institution": "Richard von Weizsacker Berufskolleg, Dulmen",
+      "degree": "Allgemeine Hochschulreife",
+      "period": "2007 - 2010",
+      "summary": "Schwerpunkt Mathematik und Informatik."
+    }
+  ]
+}

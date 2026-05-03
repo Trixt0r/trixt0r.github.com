@@ -1,0 +1,32 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section" id="impact">
+  <h2 class="section-title">{content.labels.sectionImpact}</h2>
+  <div class="impact-grid">
+    {content.impact.map((item) => (
+      <article class="impact-card">
+        <h3>{item.title}</h3>
+        <p class="section-copy">{item.summary}</p>
+        <ul>
+          {item.details.map((detail) => <li>{detail}</li>)}
+        </ul>
+        <ul class="pill-list">
+          {item.tech.map((tech) => <li class="pill">{tech}</li>)}
+        </ul>
+        {item.link && (
+          <p style="margin: 0.9rem 0 0;">
+            <a class="button-secondary" href={item.link} target="_blank" rel="noreferrer">Open reference</a>
+          </p>
+        )}
+      </article>
+    ))}
+  </div>
+</section>

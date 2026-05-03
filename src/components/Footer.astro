@@ -1,0 +1,13 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+---
+
+<footer class="footer container">
+  <small>{content.profile.name} · {content.profile.title}</small>
+</footer>

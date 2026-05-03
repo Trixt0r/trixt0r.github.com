@@ -1,0 +1,34 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+const { summary, labels, languages } = content;
+---
+
+<section class="section" id="snapshot">
+  <h2 class="section-title">{labels.sectionSnapshot}</h2>
+  <div class="snapshot-grid">
+    <article class="stat-card">
+      <strong>{summary.yearsExperienceLabel}</strong>
+      <span class="muted">Experience across production products and long-lived systems.</span>
+    </article>
+    <article class="stat-card">
+      <strong>{labels.currentRole}</strong>
+      <span class="muted">{summary.currentRoleLabel}</span>
+    </article>
+    <article class="stat-card">
+      <strong>{labels.sectionLanguages}</strong>
+      <span class="muted">{languages.items.map((item) => `${item.name} (${item.level})`).join(" · ")}</span>
+    </article>
+  </div>
+  <div class="section" style="margin-top: 1rem; padding: 1rem; background: var(--surface-soft); box-shadow: none;">
+    <strong>{labels.currentFocus}</strong>
+    <ul class="pill-list" style="margin-top: 0.8rem;">
+      {summary.focusAreas.map((item) => <li class="pill">{item}</li>)}
+    </ul>
+  </div>
+</section>

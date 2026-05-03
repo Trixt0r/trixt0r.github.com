@@ -1,0 +1,28 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="home-section" id="projects">
+  <h2 class="home-section__title">{content.labels.sectionProjects}</h2>
+  <div class="projects-stack">
+    {content.projects.map((project) => (
+      <article class="project-card project-card--stacked">
+        <div class="project-meta">{project.period}</div>
+        <h3>{project.name}</h3>
+        <p class="section-copy">{project.summary}</p>
+        <ul class="pill-list">
+          {project.tech.map((item) => <li class="pill">{item}</li>)}
+        </ul>
+        <p class="project-card__link-row">
+          <a class="button-secondary" href={project.url} target="_blank" rel="noreferrer">GitHub</a>
+        </p>
+      </article>
+    ))}
+  </div>
+</section>

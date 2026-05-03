@@ -1,0 +1,45 @@
+---
+import { defaultLocale } from '../lib/i18n';
+
+const basePath = import.meta.env.BASE_URL;
+const fallback = `${basePath}${defaultLocale}/`;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <title>Redirecting…</title>
+    <meta http-equiv='refresh' content={`0;url=${fallback}`} />
+  </head>
+  <body>
+    <script is:inline>
+      const basePath = JSON.stringify(basePath);
+      const fallback = JSON.stringify(defaultLocale);
+      const savedLocale = localStorage.getItem('preferred-locale');
+      const browserLocales = navigator.languages ?? [navigator.language ?? fallback];
+      const candidates = [savedLocale, ...browserLocales].filter(Boolean);
+
+      let nextLocale = fallback;
+      for (const value of candidates) {
+        const lowered = String(value).toLowerCase();
+        if (lowered.startsWith('de')) {
+          nextLocale = 'de';
+          break;
+        }
+        if (lowered.startsWith('ru')) {
+          nextLocale = 'ru';
+          break;
+        }
+        if (lowered.startsWith('en')) {
+          nextLocale = 'en';
+          break;
+        }
+      }
+
+      window.location.replace(`${basePath}${nextLocale}/`);
+    </script>
+    <p>Redirecting…</p>
+  </body>
+</html>

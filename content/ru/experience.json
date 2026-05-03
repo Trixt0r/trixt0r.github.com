@@ -1,0 +1,70 @@
+[
+  {
+    "id": "zeit-architect",
+    "company": "zeit ag",
+    "role": "Software Architect",
+    "location": "Sursee",
+    "start": "2023-12",
+    "end": null,
+    "summary": "Архитектурная ответственность при сохранении сильной hands-on инженерной роли.",
+    "highlights": [
+      "Определяю архитектуру и техническое направление реализации",
+      "Принимаю решения по refactoring и technical enablers",
+      "Работаю на стыке frontend, backend и infrastructure",
+      "Взаимодействую с PO, PM и engineers в разных локациях",
+      "Отвечаю за техническую сторону SaaS и on-premise эксплуатации",
+      "Использую AI-assisted workflows для кода, прототипов и документации"
+    ],
+    "tech": [".NET", "Angular", "Docker", "Kubernetes", "Azure", "AI tooling"],
+    "featured": true
+  },
+  {
+    "id": "zeit-engineer",
+    "company": "zeit ag",
+    "role": "Software Engineer",
+    "location": "Sursee",
+    "start": "2021-05",
+    "end": "2023-11",
+    "summary": "Миграция ключевых возможностей бизнес-системы с Windows fat client в web.",
+    "highlights": [
+      "Web-миграция функций учета времени, project management и планирования персонала",
+      "Поддержка клиентов в моделях SaaS и on-premise",
+      "Работа в cloud и container окружениях с CI/CD и code review"
+    ],
+    "tech": ["SQL Server", "C#", "ASP.NET", "Angular", "Docker", "Kubernetes", "Azure DevOps"],
+    "featured": true
+  },
+  {
+    "id": "nexbyte-post",
+    "company": "nexbyte GmbH",
+    "role": "Senior Software Engineer",
+    "location": "Thun",
+    "start": "2014-04",
+    "end": "2021-04",
+    "summary": "Работа над клиентскими продуктами Swiss Post с фокусом на maintainability и интеграцию в существующие бизнес-процессы.",
+    "highlights": [
+      "Редизайн, рефакторинг и сопровождение WebStamp",
+      "Разработка решения для таможенного декларирования с упором на mobile и accessibility",
+      "Работа в production PHP и JavaScript стеках на Linux и MariaDB"
+    ],
+    "tech": ["CentOS", "MariaDB", "PHP", "Zend Framework", "JavaScript", "Aurelia", "Vue"],
+    "featured": true
+  },
+  {
+    "id": "nextevent",
+    "company": "NextEvent AG",
+    "role": "Senior Software Engineer",
+    "location": "Thun",
+    "start": "2016-01",
+    "end": "2021-04",
+    "summary": "Разработка и развитие модульной event-платформы и связанных mobile-приложений.",
+    "highlights": [
+      "Платформа бронирования и продаж для концертов, конференций, клубов и шоу",
+      "Клиентские модули под требования конкретных мероприятий",
+      "Mobile admissions и POS app с камерой, GPS и NFC",
+      "Внутренний app service для других приложений NextEvent"
+    ],
+    "tech": ["PHP", "Node.js", "Express", "Backbone.js", "Zend Framework", "AWS", "Java", "Cordova"],
+    "featured": true
+  }
+]

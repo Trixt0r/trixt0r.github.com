@@ -1,0 +1,65 @@
+[
+  {
+    "id": "zeit-architecture",
+    "title": "Архитектурная ответственность в zeit ag",
+    "summary": "Техническая ответственность за web, SaaS и on-premise архитектуру зрелого бизнес-продукта.",
+    "details": [
+      "Определяю архитектурные решения и направление реализации",
+      "Остаюсь hands-on во frontend, backend и infrastructure"
+    ],
+    "tech": [".NET", "Angular", "Docker", "Kubernetes", "Azure"]
+  },
+  {
+    "id": "zeit-migration",
+    "title": "Миграция с fat client в web",
+    "summary": "Перенос ключевых функций учета времени, project management и планирования персонала в современную web-платформу.",
+    "details": [
+      "Снижение зависимости от Windows fat clients",
+      "Поддержка как SaaS, так и on-premise моделей эксплуатации"
+    ],
+    "tech": ["C#", "ASP.NET", "SQL Server", "Angular"]
+  },
+  {
+    "id": "webstamp",
+    "title": "Swiss Post WebStamp",
+    "summary": "Редизайн, рефакторинг и сопровождение production webshop для Swiss Post.",
+    "details": [
+      "Работа над массово используемым клиентским продуктом",
+      "Развитие и поддержка долгоживущей production-системы"
+    ],
+    "tech": ["PHP", "Zend Framework", "JavaScript", "Aurelia", "MariaDB"],
+    "link": "https://webstamp.post.ch"
+  },
+  {
+    "id": "post-customs",
+    "title": "Таможенный поток с фокусом на mobile и accessibility",
+    "summary": "Реализация и сопровождение процесса таможенного декларирования, встроенного в процессы Swiss Post, с высокими требованиями к mobile и accessibility.",
+    "details": [
+      "Решение должно было встроиться в существующий бизнес-процесс",
+      "Accessibility и mobile usage были базовыми требованиями"
+    ],
+    "tech": ["PHP", "Zend Framework", "Vue", "MariaDB"],
+    "link": "https://www.post.ch/en/sending-parcels/declaration-and-clearing-through-customs/declaring-goods-in-letters-and-small-consignments"
+  },
+  {
+    "id": "nextevent-platform",
+    "title": "Модульная event-commerce платформа",
+    "summary": "Разработка и развитие модульной платформы бронирования и продаж для различных типов мероприятий.",
+    "details": [
+      "Настраиваемая платформа с клиентскими модулями под конкретные события",
+      "Production-нагрузка в AWS EC2"
+    ],
+    "tech": ["PHP", "Node.js", "Express", "Backbone.js", "AWS"],
+    "link": "https://www.nextevent.com/"
+  },
+  {
+    "id": "nextevent-mobile",
+    "title": "Mobile entry и POS app",
+    "summary": "Реализовал мобильное приложение для входа на мероприятие с интегрированным point-of-sale.",
+    "details": [
+      "Использование функций устройства: камера, GPS и NFC",
+      "Поддержка реальных операционных сценариев мероприятий"
+    ],
+    "tech": ["Java", "Apache Cordova", "Backbone.js", "Android", "iOS"]
+  }
+]

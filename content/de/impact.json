@@ -1,0 +1,65 @@
+[
+  {
+    "id": "zeit-architektur",
+    "title": "Architekturverantwortung bei zeit ag",
+    "summary": "Technische Verantwortung fur Web, SaaS und On-Premise-Architektur in einem etablierten Business-Produkt.",
+    "details": [
+      "Leitet Architekturentscheidungen und technische Umsetzungsrichtung",
+      "Arbeitet weiterhin hands-on uber Frontend, Backend und Infrastruktur"
+    ],
+    "tech": [".NET", "Angular", "Docker", "Kubernetes", "Azure"]
+  },
+  {
+    "id": "zeit-migration",
+    "title": "Migration vom Fat Client ins Web",
+    "summary": "Uberfuhrung zentraler Funktionen fur Zeiterfassung, Projektmanagement und Einsatzplanung in eine moderne Web-Plattform.",
+    "details": [
+      "Reduziert Abhangigkeit von Windows-Clients",
+      "Ermoglicht Wahl zwischen SaaS- und On-Premise-Betrieb"
+    ],
+    "tech": ["C#", "ASP.NET", "SQL Server", "Angular"]
+  },
+  {
+    "id": "webstamp",
+    "title": "Swiss Post WebStamp",
+    "summary": "Redesign, Refactoring und Wartung eines produktiven Webshops fur die Schweizerische Post.",
+    "details": [
+      "Arbeit an einem stark genutzten Endkundenprodukt",
+      "Pflege und Weiterentwicklung in einem produktiven Legacy-Umfeld"
+    ],
+    "tech": ["PHP", "Zend Framework", "JavaScript", "Aurelia", "MariaDB"],
+    "link": "https://webstamp.post.ch"
+  },
+  {
+    "id": "post-customs",
+    "title": "Mobile- und Accessibility-fokussierte Zolldeklaration",
+    "summary": "Umsetzung und Wartung einer in den Postprozess eingebetteten Losung mit starkem Fokus auf mobile Endgerate und Barrierefreiheit.",
+    "details": [
+      "Produkt musste in bestehende Prozesse integriert werden",
+      "Accessibility und mobiles Nutzungsszenario waren Kernanforderungen"
+    ],
+    "tech": ["PHP", "Zend Framework", "Vue", "MariaDB"],
+    "link": "https://www.post.ch/en/sending-parcels/declaration-and-clearing-through-customs/declaring-goods-in-letters-and-small-consignments"
+  },
+  {
+    "id": "nextevent-platform",
+    "title": "Modulare Event- und Verkaufsplattform",
+    "summary": "Weiterentwicklung einer hochgradig modularen Reservations- und Verkaufsplattform fur Events aller Art.",
+    "details": [
+      "Parametrierbare Plattform mit kundenspezifischen Erweiterungen",
+      "Betrieb in AWS auf produktiven Cloud-Instanzen"
+    ],
+    "tech": ["PHP", "Node.js", "Express", "Backbone.js", "AWS"],
+    "link": "https://www.nextevent.com/"
+  },
+  {
+    "id": "nextevent-mobile",
+    "title": "Mobile Einlass- und POS-App",
+    "summary": "Umsetzung einer mobilen Einlass-Applikation inklusive integrierter Point-of-Sale-Funktionalitat.",
+    "details": [
+      "Nutzung nativer Geratefunktionen wie Kamera, GPS und NFC",
+      "Abdeckung eines realen operativen Event-Szenarios"
+    ],
+    "tech": ["Java", "Apache Cordova", "Backbone.js", "Android", "iOS"]
+  }
+]

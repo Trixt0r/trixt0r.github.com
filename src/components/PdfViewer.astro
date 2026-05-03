@@ -1,0 +1,60 @@
+---
+interface Props {
+  pdfUrl: string;
+}
+
+const { pdfUrl } = Astro.props;
+---
+
+<div class="pdf-shell">
+  <div class="pdf-canvas-list" id="pdf-canvas-list" data-pdf-url={pdfUrl}></div>
+</div>
+
+<script>
+  import * as pdfjsLib from "pdfjs-dist/build/pdf.mjs";
+  import pdfWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
+
+  const container = document.getElementById("pdf-canvas-list");
+
+  async function renderPdf() {
+    if (!(container instanceof HTMLElement)) {
+      return;
+    }
+
+    const url = container.dataset.pdfUrl;
+    if (!url) {
+      return;
+    }
+
+    const loadingTask = pdfjsLib.getDocument(url);
+    const pdf = await loadingTask.promise;
+
+    for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+      const page = await pdf.getPage(pageNumber);
+      const viewport = page.getViewport({ scale: 1.35 });
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+
+      if (!context) {
+        continue;
+      }
+
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      container.appendChild(canvas);
+
+      await page.render({
+        canvasContext: context,
+        viewport
+      }).promise;
+    }
+  }
+
+  renderPdf().catch((error) => {
+    if (container instanceof HTMLElement) {
+      container.innerHTML = `<p>PDF could not be loaded. ${String(error)}</p>`;
+    }
+  });
+</script>

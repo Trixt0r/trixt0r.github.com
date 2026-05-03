@@ -1,0 +1,21 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section" id="languages">
+  <h2 class="section-title">{content.labels.sectionLanguages}</h2>
+  <div class="info-grid">
+    {content.languages.items.map((item) => (
+      <article class="info-card">
+        <h3>{item.name}</h3>
+        <p class="section-copy">{item.level}</p>
+      </article>
+    ))}
+  </div>
+</section>

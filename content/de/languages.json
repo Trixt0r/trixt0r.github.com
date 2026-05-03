@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "name": "Deutsch", "level": "Muttersprache" },
+    { "name": "Russisch", "level": "Muttersprache" },
+    { "name": "Englisch", "level": "Fliessend" }
+  ]
+}

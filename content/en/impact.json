@@ -1,0 +1,65 @@
+[
+  {
+    "id": "zeit-architecture",
+    "title": "Architecture ownership at zeit ag",
+    "summary": "Technical ownership for web, SaaS, and on-premise architecture in an established business product.",
+    "details": [
+      "Drives architecture decisions and implementation direction",
+      "Still works hands-on across frontend, backend, and infrastructure"
+    ],
+    "tech": [".NET", "Angular", "Docker", "Kubernetes", "Azure"]
+  },
+  {
+    "id": "zeit-migration",
+    "title": "Fat-client to web migration",
+    "summary": "Moved core time tracking, project management, and workforce planning functionality into a modern web platform.",
+    "details": [
+      "Reduced reliance on Windows fat clients",
+      "Enabled both SaaS and on-premise operating models"
+    ],
+    "tech": ["C#", "ASP.NET", "SQL Server", "Angular"]
+  },
+  {
+    "id": "webstamp",
+    "title": "Swiss Post WebStamp",
+    "summary": "Redesign, refactoring, and maintenance of a production webshop for Swiss Post.",
+    "details": [
+      "Worked on a widely used customer-facing product",
+      "Handled product evolution in a long-lived production system"
+    ],
+    "tech": ["PHP", "Zend Framework", "JavaScript", "Aurelia", "MariaDB"],
+    "link": "https://webstamp.post.ch"
+  },
+  {
+    "id": "post-customs",
+    "title": "Mobile and accessibility-focused customs flow",
+    "summary": "Delivered and maintained a customs declaration workflow embedded into Swiss Post processes with strong mobile and accessibility requirements.",
+    "details": [
+      "Had to fit into an existing operational flow",
+      "Accessibility and mobile usage were core product constraints"
+    ],
+    "tech": ["PHP", "Zend Framework", "Vue", "MariaDB"],
+    "link": "https://www.post.ch/en/sending-parcels/declaration-and-clearing-through-customs/declaring-goods-in-letters-and-small-consignments"
+  },
+  {
+    "id": "nextevent-platform",
+    "title": "Modular event commerce platform",
+    "summary": "Built and evolved a highly modular reservation and sales platform for events of many kinds.",
+    "details": [
+      "Configurable platform with customer-specific modules",
+      "Production workloads running on AWS EC2"
+    ],
+    "tech": ["PHP", "Node.js", "Express", "Backbone.js", "AWS"],
+    "link": "https://www.nextevent.com/"
+  },
+  {
+    "id": "nextevent-mobile",
+    "title": "Mobile entry and POS app",
+    "summary": "Delivered a mobile admissions application with integrated point-of-sale functionality.",
+    "details": [
+      "Used device features such as camera, GPS, and NFC",
+      "Supported real operational event workflows"
+    ],
+    "tech": ["Java", "Apache Cordova", "Backbone.js", "Android", "iOS"]
+  }
+]

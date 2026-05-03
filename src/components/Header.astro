@@ -1,0 +1,32 @@
+---
+import LocaleSwitcher from "./LocaleSwitcher.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import type { LocaleContent, Locale } from "../lib/types";
+
+interface Props {
+  locale: Locale;
+  content: LocaleContent;
+  pathSuffix?: string;
+  basePath: string;
+}
+
+const { locale, content, pathSuffix = "/", basePath } = Astro.props;
+const { profile, labels } = content;
+const homeHref = `${basePath.replace(/\/$/, "")}/${locale}/`;
+const cvHref = `${basePath.replace(/\/$/, "")}/${locale}/cv/`;
+---
+
+<header class="site-header container">
+  <div class="site-header__inner">
+    <div class="brand">
+      <a class="brand__name" href={homeHref}>{profile.name}</a>
+      <span class="brand__role">{profile.title}</span>
+    </div>
+    <div class="site-header__controls">
+      <a class="button-secondary" href={homeHref}>{labels.navHome}</a>
+      <a class="button-secondary" href={cvHref}>{labels.navCv}</a>
+      <LocaleSwitcher locale={locale} pathSuffix={pathSuffix} basePath={basePath} labels={labels} />
+      <ThemeToggle labels={labels} />
+    </div>
+  </div>
+</header>

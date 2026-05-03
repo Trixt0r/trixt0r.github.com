@@ -1,0 +1,29 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+const { profile, links, labels } = content;
+---
+
+<section class="section" id="contact">
+  <h2 class="section-title">{labels.sectionContact}</h2>
+  <div class="contact-grid">
+    <article class="contact-card">
+      <h3>{labels.contactMe}</h3>
+      <ul class="link-list">
+        <li><a class="button-secondary" href={`mailto:${profile.email}`}>{profile.email}</a></li>
+        <li><a class="button-secondary" href={links.github} target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a class="button-secondary" href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
+      </ul>
+    </article>
+    <article class="contact-card">
+      <h3>{labels.locationLabel}</h3>
+      <p class="section-copy">{profile.location}</p>
+      <p class="section-copy">{labels.phoneLabel}: {profile.phone}</p>
+    </article>
+  </div>
+</section>

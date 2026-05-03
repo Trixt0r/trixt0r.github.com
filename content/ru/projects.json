@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ecsts",
+    "name": "ECSTS",
+    "period": "2019 - настоящее время",
+    "url": "https://github.com/Trixt0r/ecsts",
+    "summary": "Entity-component system для JavaScript и TypeScript, который используют и другие hobby-разработчики.",
+    "tech": ["TypeScript", "JavaScript"],
+    "featured": true
+  },
+  {
+    "id": "yame",
+    "name": "Y.A.M.E.",
+    "period": "2016 - настоящее время",
+    "url": "https://github.com/Trixt0r/yame",
+    "summary": "Универсальный 2D map editor для личных workflow, с планом на будущий public stable release.",
+    "tech": ["TypeScript", "JavaScript", "Editor tooling"],
+    "featured": true
+  },
+  {
+    "id": "spriter",
+    "name": "Spriter Runtime for Java",
+    "period": "2012 - 2020",
+    "url": "https://github.com/Trixt0r/spriter",
+    "summary": "Parser и runtime для 2D animation tool Spriter. Сейчас активно не поддерживается.",
+    "tech": ["Java", "Parsing", "Runtime"],
+    "featured": false
+  }
+]

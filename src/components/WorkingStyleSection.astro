@@ -1,0 +1,18 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section" id="working-style">
+  <h2 class="section-title">{content.labels.sectionWorkingStyle}</h2>
+  <div class="card">
+    <ul>
+      {content.workingStyle.items.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+</section>

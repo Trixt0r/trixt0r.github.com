@@ -1,0 +1,30 @@
+---
+import { formatPeriod } from "../lib/i18n";
+import type { LocaleContent, Locale } from "../lib/types";
+
+interface Props {
+  locale: Locale;
+  content: LocaleContent;
+}
+
+const { locale, content } = Astro.props;
+---
+
+<section class="section" id="experience">
+  <h2 class="section-title">{content.labels.sectionExperience}</h2>
+  <div class="timeline">
+    {content.experience.map((item) => (
+      <article class="timeline-item">
+        <div class="timeline-item__meta">{formatPeriod(item.start, item.end, locale, content.labels.timelineToday)} · {item.location}</div>
+        <h3>{item.role} · {item.company}</h3>
+        <p class="section-copy">{item.summary}</p>
+        <ul>
+          {item.highlights.map((highlight) => <li>{highlight}</li>)}
+        </ul>
+        <ul class="pill-list">
+          {item.tech.map((tech) => <li class="pill">{tech}</li>)}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>

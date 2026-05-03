@@ -1,0 +1,29 @@
+{
+  "groups": [
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "items": ["Angular", "Vue", "Aurelia", "JavaScript", "TypeScript", "Bootstrap", "DevExtreme"]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "items": ["PHP", "Node.js", "C#", ".NET", "ASP.NET", "Java", "Zend Framework", "Express"]
+    },
+    {
+      "id": "data",
+      "label": "Data и persistence",
+      "items": ["SQL Server", "MariaDB"]
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud и infrastructure",
+      "items": ["Azure", "AWS", "Docker", "Kubernetes", "Linux", "EC2"]
+    },
+    {
+      "id": "delivery",
+      "label": "Delivery и collaboration",
+      "items": ["Azure DevOps", "CI/CD", "Code reviews", "Jira", "Confluence"]
+    }
+  ]
+}
