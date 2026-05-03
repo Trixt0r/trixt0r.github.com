@@ -32,6 +32,7 @@ const alternateLinks = locales.map((currentLocale) => ({
 }));
 const canonical = alternateLinks.find((entry) => entry.locale === locale)?.href ?? new URL(Astro.url.pathname, baseUrl).toString();
 const socialImage = new URL(assetPath("favicon-512.png"), baseUrl).toString();
+const socialImageAlt = `${content.profile.name} portfolio preview`;
 const profileUrl = new URL(buildPath(import.meta.env.BASE_URL, locale), baseUrl).toString();
 const structuredData = {
   "@context": "https://schema.org",
@@ -80,6 +81,11 @@ const structuredData = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
+    <meta property="og:image:secure_url" content={socialImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content={socialImageAlt} />
     <meta property="og:locale" content={localeCodes[locale]} />
     {alternateLinks.filter((entry) => entry.locale !== locale).map((entry) => (
       <meta property="og:locale:alternate" content={localeCodes[entry.locale]} />
@@ -88,6 +94,7 @@ const structuredData = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" />
