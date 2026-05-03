@@ -16,7 +16,7 @@ const pdfPreviewHref = `${basePath.replace(/\/$/, "")}/${locale}/cv/pdf/`;
 const pdfHref = `${basePath.replace(/\/$/, "")}${content.cv.pdfPath}`;
 ---
 
-<BaseLayout locale={locale} content={content} pageTitle={content.labels.navCv}>
+<BaseLayout locale={locale} content={content} pageTitle={content.labels.navCv} pathSuffix="/cv/">
   <div class="page-shell">
     <Header locale={locale} content={content} pathSuffix="/cv/" basePath={basePath} />
     <main class="container cv-page">

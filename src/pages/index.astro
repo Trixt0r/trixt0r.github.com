@@ -11,8 +11,10 @@ const fallback = `${basePath}${defaultLocale}/`;
   <head>
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='robots' content='noindex, nofollow' />
     <meta name='theme-color' content='#f3f4f8' media='(prefers-color-scheme: light)' />
     <meta name='theme-color' content='#0b1020' media='(prefers-color-scheme: dark)' />
+    <link rel='canonical' href={fallback} />
     <link rel='icon' href={assetPath('favicon.svg')} type='image/svg+xml' />
     <link rel='alternate icon' href={assetPath('favicon.ico')} sizes='any' />
     <link rel='apple-touch-icon' href={assetPath('apple-touch-icon.png')} />

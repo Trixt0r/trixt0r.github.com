@@ -46,7 +46,8 @@ export function stripTrailingSlash(value: string) {
 
 export function buildPath(basePath: string, locale: Locale, suffix = "/") {
   const base = stripTrailingSlash(basePath);
-  const cleanedSuffix = suffix === "/" ? "" : suffix.replace(/^\//, "");
+  const normalizedBase = base === "/" ? "" : base;
+  const cleanedSuffix = suffix === "/" ? "" : suffix.replace(/^\/+|\/+$/g, "");
   const suffixPart = cleanedSuffix ? `/${cleanedSuffix}` : "";
-  return `${base}/${locale}${suffixPart}/`.replace(/\/$/, suffix.endsWith("/") || suffix === "/" ? "/" : "");
+  return `${normalizedBase}/${locale}${suffixPart}/`.replace(/\/$/, suffix.endsWith("/") || suffix === "/" ? "/" : "");
 }

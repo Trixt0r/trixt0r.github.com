@@ -96,6 +96,7 @@ export interface Links {
 export interface Seo {
   title: string;
   description: string;
+  keywords?: string[];
 }
 
 export interface Cv {

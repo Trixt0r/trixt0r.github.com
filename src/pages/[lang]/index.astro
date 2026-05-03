@@ -29,7 +29,7 @@ const sortedExperience = [...content.experience].sort((a, b) => {
 });
 ---
 
-<BaseLayout locale={locale} content={content}>
+<BaseLayout locale={locale} content={content} pathSuffix="/">
   <div class="page-shell page-shell--home container">
     <HomeSidebar locale={locale} content={content} basePath={basePath} />
     <main class="home-content">

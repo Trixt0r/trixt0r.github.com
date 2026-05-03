@@ -17,7 +17,7 @@ const pdfHref = `${basePath.replace(/\/$/, "")}${content.cv.pdfPath}`;
 const backHref = `${basePath.replace(/\/$/, "")}/${locale}/`;
 ---
 
-<BaseLayout locale={locale} content={content} pageTitle={content.labels.pdfViewerTitle}>
+<BaseLayout locale={locale} content={content} pageTitle={content.labels.pdfViewerTitle} pathSuffix="/cv/pdf/" noindex={true}>
   <div class="page-shell">
     <Header locale={locale} content={content} pathSuffix="/cv/pdf/" basePath={basePath} />
     <main class="container">
