@@ -1,0 +1,43 @@
+---
+import type { LocaleContent } from "../lib/types";
+
+interface Props {
+  content: LocaleContent;
+}
+
+const { content } = Astro.props;
+const { labels, hero, summary, profile, languages } = content;
+---
+
+<section class="home-section" id="about">
+  <h2 class="home-section__title">{labels.sectionAbout}</h2>
+  <div class="home-card home-card--about">
+    <p>{hero.subheadline}</p>
+    <div class="about-blurb">
+      <p>{summary.blurb}</p>
+      <div class="about-meta">
+        <div class="about-meta__block">
+          <span>{labels.locationLabel}</span>
+          <strong>{profile.location}</strong>
+        </div>
+        <div class="about-meta__block">
+          <span>{labels.sectionLanguages}</span>
+          <ul class="language-stack language-stack--about">
+            {languages.items.map((item) => (
+              <li class="language-stack__item">
+                <strong>{item.name}</strong>
+                <span>{item.level}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="about-focus">
+      <span class="about-focus__label">{labels.currentFocus}</span>
+      <ul class="pill-list">
+        {summary.focusAreas.map((item) => <li class="pill">{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

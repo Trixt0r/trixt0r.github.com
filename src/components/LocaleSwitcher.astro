@@ -1,0 +1,46 @@
+---
+import { locales } from "../lib/i18n";
+import type { Locale, Labels } from "../lib/types";
+
+interface Props {
+  locale: Locale;
+  pathSuffix?: string;
+  basePath: string;
+  labels: Labels;
+}
+
+const { locale, pathSuffix = "/", basePath, labels } = Astro.props;
+const cleanedSuffix = pathSuffix.startsWith("/") ? pathSuffix : `/${pathSuffix}`;
+const base = basePath === "/" ? "" : basePath.replace(/\/$/, "");
+---
+
+<nav class="locale-links" aria-label={labels.localeLabel}>
+  {locales.map((value) => (
+    <a
+      href={`${base}/${value}${cleanedSuffix === "/" ? "/" : cleanedSuffix}`}
+      class:list={{ "control-group__item": true, "is-active": value === locale }}
+      data-locale-link
+      data-locale={value}
+      aria-current={value === locale ? "page" : undefined}
+    >
+      {value.toUpperCase()}
+    </a>
+  ))}
+</nav>
+
+<script>
+  const localeLinks = document.querySelectorAll("[data-locale-link]");
+
+  for (const link of localeLinks) {
+    link.addEventListener("click", () => {
+      if (!(link instanceof HTMLElement)) {
+        return;
+      }
+
+      const nextLocale = link.dataset.locale;
+      if (nextLocale) {
+        localStorage.setItem("preferred-locale", nextLocale);
+      }
+    });
+  }
+</script>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HomeSidebar from "../../components/HomeSidebar.astro";
+import AboutSection from "../../components/AboutSection.astro";
+import ProjectsGrid from "../../components/ProjectsGrid.astro";
+import { getContent } from "../../lib/content";
+import { locales, formatPeriod } from "../../lib/i18n";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const locale = Astro.params.lang as "de" | "en" | "ru";
+const content = getContent(locale);
+const basePath = import.meta.env.BASE_URL;
+const sortedExperience = [...content.experience].sort((a, b) => {
+  const aEnd = a.end ?? "9999-12";
+  const bEnd = b.end ?? "9999-12";
+
+  if (aEnd !== bEnd) {
+    return bEnd.localeCompare(aEnd);
+  }
+
+  if (a.start !== b.start) {
+    return b.start.localeCompare(a.start);
+  }
+
+  return a.company.localeCompare(b.company);
+});
+---
+
+<BaseLayout locale={locale} content={content}>
+  <div class="page-shell page-shell--home container">
+    <HomeSidebar locale={locale} content={content} basePath={basePath} />
+    <main class="home-content">
+      <AboutSection content={content} />
+      <section class="home-section" id="history">
+        <h2 class="home-section__title">{content.labels.sectionHistory}</h2>
+        <div class="timeline timeline--home">
+          <div class="timeline__today" aria-hidden="true">
+            <div class="timeline__today-label">{content.labels.timelineToday}</div>
+            <div class="timeline__today-track"></div>
+          </div>
+          {sortedExperience.map((item) => (
+            <article class="timeline-item--home">
+              <div class="timeline-item__rail">
+                <div class="timeline-item__meta">{formatPeriod(item.start, item.start, locale, content.labels.timelineToday).split(" - ")[0]}</div>
+                <div class="timeline-item__track" aria-hidden="true">
+                  <span class="timeline-item__dot"></span>
+                </div>
+              </div>
+              <div class="timeline-item__body timeline-card">
+                <div class="timeline-card__period">{formatPeriod(item.start, item.end, locale, content.labels.timelineToday)}</div>
+                <h3>{item.role} · {item.company}</h3>
+                <p class="timeline-item__location">{item.location}</p>
+                <p class="section-copy">{item.summary}</p>
+                <ul class="timeline-item__highlights">
+                  {item.highlights.map((highlight) => <li>{highlight}</li>)}
+                </ul>
+                <ul class="pill-list">
+                  {item.tech.map((tech) => <li class="pill">{tech}</li>)}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <ProjectsGrid content={content} />
+    </main>
+  </div>
+</BaseLayout>

@@ -1,0 +1,70 @@
+---
+import type { Labels } from "../lib/types";
+
+interface Props {
+  labels: Labels;
+}
+
+const { labels } = Astro.props;
+---
+
+<div class="theme-toggle-group" role="group" aria-label={labels.themeLabel}>
+  <button class="control-group__item control-group__item--icon" type="button" data-theme-value="light" aria-pressed="false" aria-label={labels.lightTheme} title={labels.lightTheme}>
+    <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+  </button>
+  <button class="control-group__item control-group__item--icon" type="button" data-theme-value="dark" aria-pressed="false" aria-label={labels.darkTheme} title={labels.darkTheme}>
+    <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+  </button>
+</div>
+
+<script>
+  const STORAGE_KEY = "preferred-theme";
+  const root = document.documentElement;
+  const themeButtons = document.querySelectorAll("[data-theme-value]");
+
+  function resolveTheme(value) {
+    if (value === "light" || value === "dark") {
+      return value;
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  function applyTheme(value) {
+    root.setAttribute("data-theme", value);
+  }
+
+  function updateButtons(theme) {
+    for (const button of themeButtons) {
+      if (!(button instanceof HTMLButtonElement)) {
+        continue;
+      }
+
+      const isActive = button.dataset.themeValue === theme;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    }
+  }
+
+  const savedTheme = localStorage.getItem(STORAGE_KEY);
+  const activeTheme = resolveTheme(savedTheme);
+  applyTheme(activeTheme);
+  updateButtons(activeTheme);
+
+  for (const button of themeButtons) {
+    button.addEventListener("click", () => {
+      if (!(button instanceof HTMLButtonElement)) {
+        return;
+      }
+
+      const nextTheme = button.dataset.themeValue;
+      if (!nextTheme) {
+        return;
+      }
+
+      localStorage.setItem(STORAGE_KEY, nextTheme);
+      applyTheme(nextTheme);
+      updateButtons(nextTheme);
+    });
+  }
+</script>
