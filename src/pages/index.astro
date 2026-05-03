@@ -2,6 +2,7 @@
 import { defaultLocale } from '../lib/i18n';
 
 const basePath = import.meta.env.BASE_URL;
+const assetPath = (path: string) => `${basePath}${path}`;
 const fallback = `${basePath}${defaultLocale}/`;
 ---
 
@@ -11,6 +12,12 @@ const fallback = `${basePath}${defaultLocale}/`;
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <title>Redirecting…</title>
+    <meta name='theme-color' content='#f3f4f8' media='(prefers-color-scheme: light)' />
+    <meta name='theme-color' content='#0b1020' media='(prefers-color-scheme: dark)' />
+    <link rel='icon' href={assetPath('favicon.svg')} type='image/svg+xml' />
+    <link rel='alternate icon' href={assetPath('favicon.ico')} sizes='any' />
+    <link rel='apple-touch-icon' href={assetPath('apple-touch-icon.png')} />
+    <link rel='manifest' href={assetPath('site.webmanifest')} />
     <meta http-equiv='refresh' content={`0;url=${fallback}`} />
   </head>
   <body>
